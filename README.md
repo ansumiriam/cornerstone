@@ -1,25 +1,25 @@
 # Cornerstone
 
-Cornerstone is a lightweight family construction tracker built as a dependency-free progressive web app. It is designed around a Google Sheets-friendly data model so the next step can be wiring these screens to Sheets-backed CRUD.
+Cornerstone is a Next.js PWA for family construction tracking, styled with Tailwind and shadcn-style UI primitives. The current version presents the agreed MVP modules and keeps the data model aligned to a future Google Sheets CRUD backend.
 
 ## Current scope
 
-- Dashboard for project overview
-- Expense tracking with `paid by` visibility
-- Spend-by-material summary
-- Task tracker
-- Contact list with tags and a primary site contact
-- Notes for later discussion
-- Installable PWA with offline caching
+- Next.js app router foundation
+- Tailwind + shadcn-style UI components
+- Dashboard, expenses, tasks, contacts, notes, and users overview
+- Material-wise totals and `paid by` expense visibility
 - Shareable app link inside the app
+- PWA manifest and service worker registration
 
 ## Local use
 
-Open `index.html` in a browser, or serve the folder with any static file server for the best PWA behavior.
+1. `npm install`
+2. `npm run dev`
+3. Open `http://localhost:3000`
 
 ## Planned next step
 
-Connect the screens to Google Sheets API for multi-user CRUD using the agreed tabs:
+Wire the screens to Google Sheets API for multi-user CRUD using the agreed tabs:
 
 - `Users`
 - `Expenses`
