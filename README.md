@@ -11,6 +11,7 @@ Cornerstone is a Next.js PWA for family construction tracking, styled with Tailw
 - Shareable app link inside the app
 - PWA manifest and service worker registration
 - Google Sheets adapter with demo-data fallback
+- CRUD API routes and form-driven UI for expenses, tasks, contacts, and notes
 
 ## Local use
 
@@ -29,10 +30,11 @@ Cornerstone is a Next.js PWA for family construction tracking, styled with Tailw
    - `GOOGLE_SERVICE_ACCOUNT_PRIVATE_KEY`
 
 If those values are missing, the app automatically falls back to the built-in demo dataset so local development still works.
+In fallback mode, mutations are persisted to `data/demo-project-data.json`.
 
 ## Planned next step
 
-Extend the Google Sheets integration from read-only loading into full CRUD using the agreed tabs:
+Extend the Google Sheets integration from the current CRUD foundation into authentication, user management, and richer workflows using the agreed tabs:
 
 - `Users`
 - `Expenses`
