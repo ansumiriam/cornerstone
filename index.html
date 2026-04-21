@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#14342b">
+  <meta name="description" content="Cornerstone is a family construction tracker for expenses, tasks, contacts, notes, and shared project updates.">
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="styles.css">
+  <title>Cornerstone</title>
+</head>
+<body>
+  <div class="app-shell">
+    <header class="hero">
+      <div class="hero__content">
+        <p class="eyebrow">Family Construction Tracker</p>
+        <h1>Cornerstone</h1>
+        <p class="hero__copy">
+          Track site expenses, pending work, vendors, family notes, and who paid for what in one shared place.
+        </p>
+        <div class="hero__actions">
+          <button id="share-app" class="button button--primary" type="button">Share App</button>
+          <button id="install-app" class="button button--secondary hidden" type="button">Install App</button>
+        </div>
+        <p class="hero__link">
+          Shareable app link:
+          <a id="app-link" href="" target="_blank" rel="noreferrer"></a>
+        </p>
+      </div>
+      <section class="spotlight-card">
+        <p class="spotlight-card__label">Today at a glance</p>
+        <div class="spotlight-grid">
+          <article>
+            <span>Total Spend</span>
+            <strong id="total-spend"></strong>
+          </article>
+          <article>
+            <span>Pending Payments</span>
+            <strong id="pending-payments"></strong>
+          </article>
+          <article>
+            <span>Open Tasks</span>
+            <strong id="open-tasks"></strong>
+          </article>
+          <article>
+            <span>Open Notes</span>
+            <strong id="open-notes"></strong>
+          </article>
+        </div>
+      </section>
+    </header>
+
+    <main class="layout">
+      <section class="panel panel--summary">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Dashboard</p>
+            <h2>Project snapshot</h2>
+          </div>
+        </div>
+        <div class="metric-grid" id="summary-cards"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Expenses</p>
+            <h2>Recent payments</h2>
+          </div>
+          <span class="chip">Google Sheets ready schema</span>
+        </div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Date</th>
+                <th>Item</th>
+                <th>Vendor</th>
+                <th>Paid By</th>
+                <th>Status</th>
+                <th>Amount</th>
+              </tr>
+            </thead>
+            <tbody id="expenses-body"></tbody>
+          </table>
+        </div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Material View</p>
+            <h2>Spend by item</h2>
+          </div>
+        </div>
+        <div class="metric-grid" id="material-totals"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Tasks</p>
+            <h2>Pending work</h2>
+          </div>
+        </div>
+        <div class="stack" id="tasks-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Contacts</p>
+            <h2>Vendors and site people</h2>
+          </div>
+        </div>
+        <div class="stack" id="contacts-list"></div>
+      </section>
+
+      <section class="panel">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Notes</p>
+            <h2>Discuss later</h2>
+          </div>
+        </div>
+        <div class="stack" id="notes-list"></div>
+      </section>
+
+      <section class="panel panel--schema">
+        <div class="panel__header">
+          <div>
+            <p class="eyebrow">Sheets Schema</p>
+            <h2>MVP tabs</h2>
+          </div>
+        </div>
+        <div class="schema-grid" id="schema-list"></div>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

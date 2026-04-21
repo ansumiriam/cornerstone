@@ -1,0 +1,6 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" role="img" aria-label="Cornerstone icon">
+  <rect width="256" height="256" rx="52" fill="#14342b"/>
+  <path d="M58 158 128 68l70 90" fill="none" stroke="#f6f1e8" stroke-linecap="round" stroke-linejoin="round" stroke-width="22"/>
+  <path d="M84 164h88" fill="none" stroke="#b35c2e" stroke-linecap="round" stroke-width="20"/>
+  <circle cx="128" cy="164" r="24" fill="#f6f1e8"/>
+</svg>
